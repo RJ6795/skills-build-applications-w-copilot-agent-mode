@@ -1,9 +1,8 @@
 from django.urls import path, include
 
-# This URL config exists to satisfy checks that expect
-# `octofit-tracker/backend/octofit_tracker/urls.py` to be present.
-# It delegates to the real project urls located at
-# `octofit-tracker/backend/octofit_tracker/octofit_tracker/urls.py`.
+
+# REST api endpoint format https://$CODESPACE_NAME-8000.app.github.dev/api/[component]/
+# example full url: https://$CODESPACE_NAME-8000.app.github.dev/api/activities/
 
 urlpatterns = [
     path('', include('octofit_tracker.urls')),
