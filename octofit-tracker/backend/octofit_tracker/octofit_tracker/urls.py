@@ -25,7 +25,7 @@ def api_root(request):
     codespace_name = os.environ.get('CODESPACE_NAME', '')
     # REST api endpoint format https://$CODESPACE_NAME-8000.app.github.dev/api/[component]/
     # example full url: https://$CODESPACE_NAME-8000.app.github.dev/api/activities/
-    base_url = f"https://{codespace_name}-8000.app.github.dev" if codespace_name else request.build_absolute_uri('/')[:-1]
+        base_url = f"https://{codespace_name}-8000.app.github.dev"
     return Response({
         'users': f"{base_url}/api/users/",
         'teams': f"{base_url}/api/teams/",
