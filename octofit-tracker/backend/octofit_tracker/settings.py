@@ -4,7 +4,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-s#)1jeou9k&iwtllr=7cpo1*d@r4thd+++d%)+#j8adjm5l-*@'
 DEBUG = True
-ALLOWED_HOSTS = []
+import os
+CODESPACE_NAME = os.environ.get('CODESPACE_NAME', '')
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    f'{CODESPACE_NAME}-8000.app.github.dev' if CODESPACE_NAME else '',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
