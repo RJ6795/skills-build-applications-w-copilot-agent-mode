@@ -1,4 +1,5 @@
-"""Populate the octofit_db MongoDB database with test data.
+"""
+Populate the octofit_db database with test data
 
 This script uses pymongo to connect to localhost:27017 and insert sample activity
 documents into the `activities` collection of the `octofit_db` database.
