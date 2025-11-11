@@ -6,6 +6,11 @@ documents into the `activities` collection of the `octofit_db` database.
 Run with the venv python (absolute path):
 
 /WORKSPACE/.../venv/bin/python scripts/populate_db.py
+"""Populate the octofit_db MongoDB database with test data.
+
+This script uses pymongo to connect to localhost:27017 and insert sample activity
+documents into the `activities` collection of the `octofit_db` database.
+"""
 """
 from pymongo import MongoClient
 from datetime import datetime, timedelta

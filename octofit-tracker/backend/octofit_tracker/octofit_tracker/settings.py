@@ -79,9 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'octofit_db',
-        # If you need to connect to a remote host, set HOST/PORT/USER/PASSWORD here.
-        # 'HOST': 'localhost',
-        # 'PORT': 27017,
+        'HOST': 'localhost',
+        'PORT': 27017,
     }
 }
 
